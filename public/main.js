@@ -4,10 +4,10 @@ const clickHandler = () => alert('The car is: Nissan Skyline GTR')
 
 btn.addEventListener('click', clickHandler)
 
-const btn2 = document.querySelector('button2')
+const btn2 = document.querySelector('#button2')
 
-const getCat = () => {
-    axios.get('/api/car')
+const getCar = () => {
+    axios.get('http://ec2-54-190-98-158.us-west-2.compute.amazonaws.com/api/car')
     .then(res => {
         alert(res.data)
     })
@@ -16,4 +16,4 @@ const getCat = () => {
     })
 }
 
-btn2.addEventListener('click', getCat)
+btn2.addEventListener('click', getCar)
